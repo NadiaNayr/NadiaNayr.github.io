@@ -2,14 +2,43 @@
 <html lang="en">
 
 	<head>
-		<title><strong>Aidan's Recipes</strong></title>
+		<title>Aidan's Recipes</title>
 		<script src="../../js/validate.js"></script>
+	<style>
+		.CenteredText {
+			text-align: center;
+		}
+		table,tr,th,td{
+			border:black 1px solid;
+			border-collapse: collapse;
+		}
+		body{
+			background-color:lightblue;
+		}
+	</style>
 	</head>
 
 	<body>
-		<p>This is a recipe page</p>
-		<a href="1.html">Lemon Pasta</a>
-		<a href="2.html">Lemonade</a>
+		<h1 class="CenteredText">Aidan's Lemon Recieps</h1>
+		<p>All of my recipes are lemon based because I love lemons.</p>
+		
+<!--I took all photos-->
+	<img src="images/LemonPasta.jpg"
+		alt="picture of Lemon pasta"
+		srcset="images/LemonPasta.jpg 320w,
+			images/LemonPasta2.Jpg 640w"
+ 		sizes="(max-width: 320px) 95vw,
+ 			(max-width: 640px) 45vw">
+		<a href="1.html">Lemon Pasta Recipe</a>
+		<p>My godsister showed me this recipe a couple weeks ago and I have loved it ever since!</p>
+	<img src="images/Lemonade1.jpg"
+	     alt="Picture of Lemonade"
+	     srcset="images/Lemonade1.jpg 320w,
+		    images/Lemonade2.jpg 640w"
+	     sizes="(max-width: 320px) 95vw,
+		    (max-width: 640px) 45vw">
+		<a href="2.html">Homemade lemonade Recipe</a>
+		<p>Ever since my friend showed me this simple, homemade  lemonade recipe, I have     constantly made it!</p>
 	</body>
 
 </html>
