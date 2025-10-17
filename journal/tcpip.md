@@ -12,4 +12,8 @@ Includes protocols:
 
 ## Transport
 
+The Transport breaks things into packets and assigns them a value.
+
 ## Internet
+
+The internet does the routing
