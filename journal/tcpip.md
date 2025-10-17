@@ -6,9 +6,9 @@ There are 4 layers.
 
 Includes protocols:
 
--SSH
--WWW
--Email
+- SSH
+- WWW
+- Email
 
 ## Transport
 
