@@ -2,7 +2,7 @@
 
 ![digital Picture](../images/BLACKGUY.png)
 
-![Paper Picture](../images/BLACKGUY2.png)
+![Paper Picture](../images/BLACKGUY2.jpg)
 
 ## Binary
 
