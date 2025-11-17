@@ -18,9 +18,9 @@ and the messages that you received.
 
 | Encoded Message | Decoded Message | Key |
 | --------------- | --------------- | --- |
-|67               |The number I chose is 6|     |
-|BillyBobBillyJeff|NadiaNayr        |     |
-|                 |Adian is a 76 God|     |
+|                 |                 |     |
+|                 |                 |     |
+|                 |                 |     |
 |                 |                 |     |
 
 
