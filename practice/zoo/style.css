@@ -1,0 +1,16 @@
+table, td, tr{
+	border: 1px solid black;
+	border-collapse: collapse;
+	background-color: gainsboro;
+
+}
+body{
+	background-color: Papayawhip;
+}
+h1{
+	background-color burlywood;
+}
+
+#info{
+	background-color: burlywood;
+}
