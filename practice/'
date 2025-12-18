@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html land = "en">
+
+	<head>
+		<title>Who wants ice cream??</title>
+		<script src="../js/validate.js"></script>
+	</head>
+
+	<body>
+		<form action="https://httpbin.org/post" method="post">
+			<input type="text" namke="yourname">
+				What is your name?
+			<button type="submit">Submit</button>
+
+
+			<!-- entertainment -->
+			<label for="pasta">Pasta:</label>
+			<select id="pasta" name="pasta">
+				<option value="spaghetti">Spaghetti</option>
+				<option value="penne">Penne</option>
+				<option value="lasagna">Lasagna</option>
+				<option value="farfalle">Farfalle</option>
+			</select>
+		</form>
+	</body>
+</html>
