@@ -40,6 +40,16 @@
               background-color: white;
               margin: auto;
             }
+            .heart2 {
+              height: 20vh; /* adjust to control the size */
+              aspect-ratio: 1;
+              --_m: radial-gradient(#000 69%,#0000 70%) 84.5%/50%;
+              -webkit-mask-box-image: var(--_m);
+                         mask-border: var(--_m);
+              clip-path: polygon(-41% 0,50% 91%, 141% 0);
+              background-color: rgb(201, 62, 62);
+              margin: auto;
+            }
             /* fallback until better support for mask-border */
             @supports not (-webkit-mask-box-image: var(--_m)) { 
               .heart {
@@ -79,7 +89,7 @@
         <h1>Here, I got you some chocolates &lt;3</h1>
         <div class="container">
             <div class="heart" id="chocolateheart"></div>
-            <div class="heart" id="chocolateheart2"></div>
+            <div class="heart2" id="chocolateheart2"></div>
             <div class="lilbits">
                 <div id="mnm">
 
