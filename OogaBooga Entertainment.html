@@ -7,11 +7,20 @@
                 display: grid;
                 height: 150vh;
                 grid:
-                    'Header Header' 75px
+                    'Title Header' 75px
                     'Hero Hero' 150px
                     'menu menu' 1fr
                     'foot foot' 200px
                     /200px 1fr;
+            }
+            #Title {
+                grid-area: Title;
+                background-color: #ffffff;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                    font-size: 24px;
+                        color: #ff1493;
             }
             #Hero {
                 grid-area: Hero;
@@ -21,6 +30,7 @@
                 text-align: center;
                     font-size: 24px;
                         color: white;
+            }
         </style>
 
 		<title>Ooga Booga Entertainment</title>
@@ -29,7 +39,11 @@
 		<p>This is my first HTML page.</p>
         <div class="grid">
             <div id="Hero">
-                <h1>Ooga Booga</h1>
+            </div>
+        </div>
+        <div>
+            <div id="Title">
+                <h1>Ooga Booga Entertainment</h1>
             </div>
         </div>
 	</body>
