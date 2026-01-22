@@ -3,10 +3,84 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <title>Ooga Booga</title>
+
+        <style>
+            .grid {
+                    display: grid;
+                    height: 150vh;
+                    grid:
+                        'Logo Header' 75px
+                        'Hero Hero' 450px
+                        'main main' 1fr
+                        'foot foot' 200px
+                        /200px 1fr;
+            }
+            #Logo {
+                grid-area: Logo;
+                background-color: lightgreen;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                    font-size: 15px;
+                        color: #0033cc;
+            }
+            #Header {
+                grid-area: Header;
+                background-color: lightgreen;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                    font-size: 15px;
+                        color: #0033cc;
+            }
+            #Hero {
+                grid-area: Hero;
+                background-color: lightgreen;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                    font-size: 24px;
+                        color: white;
+            }
+            #main {
+                grid-area: main;
+                background-color: lightgreen;
+                width: 100%;
+                height: 100%;
+                text-align: left;
+                    font-size: 16px;
+                        color: rgb(0, 0, 0);
+            }
+            #foot {
+                grid-area: foot;
+                background-color: rgb(0, 0, 0);
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                    font-size: 15px;
+                        color: #0033cc;
+            }
+        </style>
     </head>
     <body>
-        <h1>Ooga Booga</h1>
-            <p>Ooga Booga page</p>
+        <div class="grid">
+            <div id="Logo" style="grid-area: Logo; background-color: lightgreen; width: 100%; height: 100%; text-align: center; font-size: 15px; color: #0033cc;">
+                Ooga Booga Logo
+            </div>
+            <div id="Header" style="grid-area: Header; background-color: lightgreen; width: 100%; height: 100%; text-align: center; font-size: 15px; color: #0033cc;">
+                Ooga Booga Header
+            </div>
+            <div id="Hero" style="grid-area: Hero; background-color: lightgreen; width: 100%; height: 100%; text-align: center; font-size: 24px; color: white;">
+                Ooga Booga Hero Section
+            </div>
+            <div id="main" style="grid-area: main; background-color: lightgreen; width: 100%; height: 100%; text-align: left; font-size: 16px; color: rgb(0, 0, 0);">
+                Ooga Booga Main Content
+            </div>
+            <div id="foot" style="grid-area: foot; background-color: rgb(0, 0, 0); width: 100%; height: 100%; text-align: center; font-size: 15px; color: #0033cc;">
+                Ooga Booga Footer
+            </div>
+        </div>
     </body>
 </html>
