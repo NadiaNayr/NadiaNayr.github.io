@@ -66,17 +66,40 @@
 #Sidebar {
     position: fixed;
     top: 0;
-    right: -250px;
+    left: -250px;           /* start hidden */
     width: 250px;
     height: 100vh;
     background-color: #e0e0e0;
     padding: 20px;
-    transition: right 0.3s ease;
+    transition: left 0.3s ease;
     z-index: 1000;
 }
 
 #Sidebar.active {
-    right: 0;
+    left: 0;
+}
+
+/* ===== SIDEBAR LINKS ===== */
+#Sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#Sidebar li {
+    margin: 15px 0;
+}
+
+#Sidebar a {
+    text-decoration: none;
+    color: #141414;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#Sidebar a:hover {
+    background-color: #c9a780;
 }
 
 /* ===== CARD ===== */
@@ -96,10 +119,10 @@
 <div id="Sidebar">
     <h3>Menu</h3>
     <ul>
-        <li>Home</li>
-        <li>Books</li>
-        <li>Articles</li>
-        <li>About</li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#books">Books</a></li>
+        <li><a href="#articles">Articles</a></li>
+        <li><a href="#about">About</a></li>
     </ul>
 </div>
 
@@ -115,7 +138,7 @@
 
     <div id="Hero"></div>
 
-    <div id="main">
+    <div id="main" id="home">
         <div class="card">
             <img src="ooga booga" style="width:100%">
             <h4><b>book1</b></h4>
