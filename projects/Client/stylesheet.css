@@ -5,8 +5,13 @@
     p {
         font-family: 'Georgia', serif;
     }
+/* Centered text */
+    .center {
+        text-align: center;
+    }
 
-        /* SECTIONS */
+
+/* SECTIONS */
     #Logo {
         grid-area: Logo;
         background-color: #6d6d6d;
