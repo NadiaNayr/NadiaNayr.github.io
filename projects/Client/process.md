@@ -22,3 +22,7 @@
 - I showed her the "about" and "Events" sections, as well as asking her to make the text shorter to easily fit on the screen
 - She thought it looked good and asked for me to shorten it
 - I agreed to shortining it and promtply sent the code over to her after double checking everything
+
+## after
+
+I added stuff after because she wanted something simple right after and I decided to help.
