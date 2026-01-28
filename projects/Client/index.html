@@ -3,9 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>For The Historian</title>
-
 <link rel="stylesheet" href="stylesheet.css">
     <style>
     /* GRID */
@@ -21,7 +19,6 @@
     }
 
     /* SECTIONS */
-
     #Hero {
         grid-area: Hero;
         background-image: url('Media/gettysburg.jpg');
@@ -66,17 +63,19 @@
     #Sidebar.active {
         left: 0;
     }
+    
     /* SIDEBAR LINKS */
     #Sidebar ul {
-      list-style: none;
-      padding: 0;
+        list-style: none;
+        padding: 0;
     }
 
     #Sidebar li {
         margin: 15px 0;
     } 
+    
     #Sidebar a {
-    text-decoration: none;
+        text-decoration: none;
         color: #141414;
         font-size: 18px;
         display: block;
@@ -92,10 +91,32 @@
     .card {
         max-width: 350px;
         max-height: 500px;
-        margin: auto;
+        margin: 10px;
         text-align: left;
         border-radius: 5px;
         background-color: #c9a780;
+    }
+
+    /* Flex container to hold the cards */
+    .card-container {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        flex-wrap: wrap; /* This ensures responsiveness */
+    }
+
+    /* Centering images inside the card */
+    .card img {
+        width: 200px;
+        margin-top: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Centering titles inside the card */
+    .card h3 {
+        text-align: center;
     }
     </style>
 </head>
@@ -126,23 +147,26 @@
     <div id="Hero"></div>
 
     <div id="main" id="home">
-        <h3 class="center">Popular Books</h3>
-        <div class="card">
-            <img src="Media/Killer Angels.jpg" style="width: 200px; margin-top:10px;" class="center">
-            <h3 class="center"><b>The Killer Angels</b></h3>
-            <p style="margin: 10px;">The Killer Angels by Michael Shaara is a vivid, deeply human account of the Battle of Gettysburg that reads less like traditional military history and more like a novel about choice, character, and consequence.</p>
+        <h2 class="center">Staff Picks</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="Media/Killer Angels.jpg" class="center">
+                <h3><b>The Killer Angels</b></h3>
+                <p style="margin: 10px;">The Killer Angels by Michael Shaara is a vivid, deeply human account of the Battle of Gettysburg that reads less like traditional military history and more like a novel about choice, character, and consequence.</p>
+            </div>
+            <div class="card">
+                <img src="Media/CF.jpg" class="center">
+                <h3><b>Churchill’s Few: Pilots of the Battle of Britain</b></h3>
+                <p style="margin: 10px;">Churchill’s Few: Pilots of the Battle of Britain by Andy Saunders is a richly illustrated and highly accessible tribute to the men of the Royal Air Force and other aircrew who fought in the pivotal Battle of Britain during the summer of 1940. Rather than retelling the broad strategic sweep of the campaign, Saunders focuses on the individual stories of more than 50 pilots and aircrew</p>
+            </div>
         </div>
     </div>
 
     <div id="foot">
         <p>42 York Street, Gettysburg PA 17325<br>
-        </br>
         (717) 685-5207<br>
-        </br>
         info@forthehistorian.com<br>
-        </br>
-        <a href="https://www.facebook.com/FORTHEHISTORIAN/">facebook: https://www.facebook.com/FORTHEHISTORIAN/</a>
-        </p>
+        <a href="https://www.facebook.com/FORTHEHISTORIAN/">facebook: https://www.facebook.com/FORTHEHISTORIAN/</a></p>
     </div>
 </div>
 
