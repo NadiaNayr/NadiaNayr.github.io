@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Heart</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .heart {
+            background-color: red;
+            position: relative;
+            transform: rotate(-45deg);
+            /* Initial size, JavaScript will adjust */
+            width: 100px; 
+            height: 100px;
+        }
+        .heart::before,
+        .heart::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: red;
+        }
+        .heart::before {
+            top: -50%;
+            left: 0;
+        }
+        .heart::after {
+            left: 50%;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="heart-container"></div>
+
+    <script>
+        // JavaScript to create the heart element and add it to the page
+        function createHeart() {
+            // Get the container element where the heart will be placed
+            const container = document.getElementById('heart-container');
+
+            // Create a new div element
+            const heart = document.createElement('div');
+
+            // Add the 'heart' class to apply the CSS styles
+            heart.classList.add('heart');
+
+            // Append the new heart element to the container
+            container.appendChild(heart);
+        }
+
+        // Call the function to create the heart when the script runs
+        createHeart();
+    </script>
+</body>
+</html>
