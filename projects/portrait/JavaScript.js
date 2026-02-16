@@ -12,5 +12,5 @@ ctx.fillStyle = "red";
 ctx.fillRect(350, 100, 50, 50);
 
 //draw a circle
-const ctx = document.getElementById('canvas').getContext('2d');
 ctx.arc(50, 50, 40, 0, 7); ctx.fill(); 
+
