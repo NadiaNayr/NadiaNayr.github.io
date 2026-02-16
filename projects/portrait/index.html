@@ -2,7 +2,10 @@
 <html lang="en">
     <head>
         <title>My First Canvas</title>
-        <script src="JavaScript.js" defer></script>
+        <script>
+            const canvas = document.getElementById("canvas");
+            const ctx = canvas.getContext("2d");
+        </script>
         <style>
             canvas {
                 border: 2px solid black;
@@ -12,7 +15,20 @@
     <body>
         <h1>Canvas Practice</h1>
         <canvas id="canvas" width="800" height="800">
+        <script>
 
+        //draw a green rectangle
+        ctx.fillStyle = "green";
+        ctx.fillRect(100, 100, 200, 300);
+
+        //draw a red sqaure
+        ctx.fillStyle = "red";
+        ctx.fillRect(350, 100, 50, 50);
+
+        //draw a circle
+        ctx.arc(50, 50, 40, 0, 7); ctx.fill();
+
+        </script>
         </canvas>
     </body>
 </html>
