@@ -113,9 +113,21 @@ ctx.fillRect(280, 310, 100, 15);
 ctx.fillRect(420, 310, 100, 15);
 
 //Neck
-
 ctx.fillStyle = "#f5cfa0";
 ctx.fillRect(360, 600, 80, 120);
+
+//Body
+ctx.fillStyle = "blue";
+ctx.fillRect(310, 720, 180, 200);
+
+ctx.fillStyle = "blue";
+ctx.beginPath();
+ctx.moveTo(310, 720);
+ctx.quadraticCurveTo(400, 680, 490, 720); // top curve
+ctx.lineTo(490, 920); // right side
+ctx.lineTo(310, 920); // left side
+ctx.closePath();
+ctx.fill();
 
 </script>
 
