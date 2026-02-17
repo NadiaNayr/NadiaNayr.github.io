@@ -1,0 +1,119 @@
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+//Hair
+ctx.fillStyle = "#3b2a1a"; // dark brown
+ctx.beginPath();
+ctx.arc(400, 350, 220, Math.PI, 0);
+ctx.fill();
+
+// Head
+ctx.fillStyle = "#f5cfa0";
+ctx.beginPath();
+ctx.arc(400, 400, 200, 0, Math.PI * 2);
+ctx.fill();
+
+// Left Ear
+ctx.beginPath();
+ctx.arc(200, 400, 50, 0, Math.PI * 2);
+ctx.fill();
+
+// Right Ear
+ctx.beginPath();
+ctx.arc(600, 400, 50, 0, Math.PI * 2);
+ctx.fill();
+
+// Left Eye White
+ctx.fillStyle = "white";
+ctx.beginPath();
+ctx.arc(330, 380, 40, 0, Math.PI * 2);
+ctx.fill();
+
+// Right Eye White
+ctx.beginPath();
+ctx.arc(470, 380, 40, 0, Math.PI * 2);
+ctx.fill();
+
+// Left Pupil
+ctx.fillStyle = "black";
+ctx.beginPath();
+ctx.arc(330, 380, 20, 0, Math.PI * 2);
+ctx.fill();
+
+// Right Pupil
+ctx.beginPath();
+ctx.arc(470, 380, 20, 0, Math.PI * 2);
+ctx.fill();
+
+// Left Glass
+ctx.strokeStyle = "black";
+ctx.lineWidth = 5;
+ctx.beginPath();
+ctx.arc(330, 380, 60, 0, Math.PI * 2);
+ctx.stroke();
+
+// Right Glass
+ctx.beginPath();
+ctx.arc(470, 380, 60, 0, Math.PI * 2);
+ctx.stroke();
+
+// Bridge
+ctx.beginPath();
+ctx.moveTo(390, 380);
+ctx.lineTo(410, 380);
+ctx.stroke();
+
+// Nose
+ctx.fillStyle = "#e0a96d";
+ctx.beginPath();
+ctx.arc(400, 440, 25, 0, Math.PI * 2);
+ctx.fill();
+
+// Chin
+ctx.strokeStyle = "#f5cfa0";
+ctx.fillStyle = "#f5cfa0";
+ctx.beginPath();
+ctx.arc(400, 520, 120, 0, Math.PI);
+ctx.stroke();
+ctx.fill()
+
+// Mouth
+ctx.fillStyle = "red";
+ctx.beginPath();
+ctx.arc(400, 520, 60, 0, Math.PI);
+ctx.fill();
+
+// Tongue
+ctx.fillStyle = "pink";
+ctx.beginPath();
+ctx.arc(400, 530, 30, 0, Math.PI);
+ctx.fill();
+
+// Left Eyebrow
+ctx.fillStyle = "black";
+ctx.fillRect(280, 310, 100, 15);
+
+// Right Eyebrow
+ctx.fillRect(420, 310, 100, 15);
+
+//Neck
+ctx.fillStyle = "#f5cfa0";
+ctx.fillRect(360, 600, 80, 120);
+
+//Body
+ctx.fillStyle = "blue";
+ctx.fillRect(310, 720, 180, 200);
+
+ctx.fillStyle = "blue";
+ctx.beginPath();
+ctx.moveTo(310, 720);
+ctx.quadraticCurveTo(400, 680, 490, 720); // top curve
+ctx.lineTo(490, 920); // right side
+ctx.lineTo(310, 920); // left side
+ctx.closePath();
+ctx.fill();
+
+//Arms
+ctx.fillStyle = "blue"
+ctx.fillRect(260,720,50,150)
+ctx.fillRect(490,720,50,150)
