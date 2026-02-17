@@ -18,23 +18,9 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
 //Hair
-ctx.fillStyle = "black";
+ctx.fillStyle = "#3b2a1a"; // dark brown
 ctx.beginPath();
-ctx.moveTo(200, 300);
-
-ctx.lineTo(250, 180);
-ctx.lineTo(300, 300);
-
-ctx.lineTo(350, 160);
-ctx.lineTo(400, 300);
-
-ctx.lineTo(450, 180);
-ctx.lineTo(500, 300);
-
-ctx.lineTo(550, 200);
-ctx.lineTo(600, 300);
-
-ctx.closePath();
+ctx.arc(400, 350, 220, Math.PI, 0);
 ctx.fill();
 
 // Head
