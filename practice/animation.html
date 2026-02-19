@@ -1,0 +1,36 @@
+<!DOCTYPE html>\
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Practice</title>
+</head>
+<body>
+    <h1>Animation Practice</h1>
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+
+//define functions
+function drawRect(x,y) {
+    console.log("drawing rect");
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = 'blue';
+    ctx.fillRect(x,y,50,50);
+    ctx.fill();
+}
+
+function animate() {
+    let x = 1;
+    x = x + 1;
+
+    let y = 1;
+    y = y + 1;
+    drawRect(x,y);
+
+    requestAnimationFrame(animate);
+}
+
+animate();
+    </script>
+</body>
