@@ -6,27 +6,28 @@
     <title>ooga booga</title>
 </head>
 <body>
+    <canvas id="myCanvas" width="800" height="800"></canvas>
     <script>
         const canvas = document.getElementById("myCanvas");
         const ctx = canvas.getContext("2d");
+    
+        //define functions
+        function drawRect(x,y) {
+            ctx.fillRect(x, y, 50, 50);
+            ctx.fill();
+        }
+        function animate() {
+            let x = 1;
+            x = x + 1;
 
-    //define functions
-    function drawRect(x,y) {
-        ctx.fillRect(x, y, 50, 50);
-        ctx.fill();
-    }
-    function animate() {
-        let x = 1;
-        x = x + 1;
+            let y = 1;
+            y = y + 1;
+            drawRect(x,y);
 
-        let y = 1;
-        y = y + 1;
-        drawRect(x,y);
+            requestAnimationFrame(animate);
+        }
 
-        requestAnimationFrame(animate);
-    }
-
-    animate();
+        animate();
     </script>
 </body>
 </html>
