@@ -21,7 +21,7 @@
         let x = 0; // start at left
         const y = (canvas.height - size) / 2; // vertically centered
         let vx = 3; // horizontal speed
-        let vy = 3; // Vertical speed
+        //let vy = 3; // Vertical speed
 
         function drawRect(x, y) {
             ctx.fillStyle = "#e74c3c";
@@ -33,7 +33,7 @@
 
             // move
             x += vx;
-            y += vy;
+            //y += vy;
 
             drawRect(x, y);
             requestAnimationFrame(animate);
