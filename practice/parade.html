@@ -21,9 +21,14 @@
         let x = 0; // start at left
         const y = (canvas.height - size) / 2; // vertically centered
         let vx = 3; // horizontal speed
+        let vx2 = 5;
 
         function drawRect(x, y) {
             ctx.fillStyle = "#e74c3c";
+            ctx.fillRect(x, y, size, size);
+        }
+        function drawRect2(x, y) {
+            ctx.fillStyle = "#3498db";
             ctx.fillRect(x, y, size, size);
         }
 
@@ -32,17 +37,21 @@
 
             // move
             x += vx;
+            x += vx2;
 
             // bounce on edges
             if (x + size > canvas.width) {
                 x = canvas.width - size;
                 vx = -vx;
+                vx2 = -vx2;
             } else if (x < 0) {
                 x = 0;
                 vx = -vx;
+                vx2 = -vx2;
             }
 
             drawRect(x, y);
+            drawRect2(x + 100, y + 100);
             requestAnimationFrame(animate);
         }
 
