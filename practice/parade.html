@@ -33,15 +33,6 @@
             // move
             x += vx;
 
-            // bounce on edges
-            if (x + size > canvas.width) {
-                x = canvas.width - size;
-                vx = -vx;
-            } else if (x < 0) {
-                x = 0;
-                vx = -vx;
-            }
-
             drawRect(x, y);
             requestAnimationFrame(animate);
         }
