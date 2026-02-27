@@ -29,7 +29,7 @@
         }
         function drawRect2(x, y) {
             ctx.fillStyle = "#3498db";
-            ctx.fillRect(x, y, size, size);
+            ctx.fillRect(x2, y2, size, size);
         }
 
         function animate() {
@@ -37,7 +37,7 @@
 
             // move
             x += vx;
-            x += vx2;
+            x2 += vx2;
 
             // bounce on edges
             if (x + size > canvas.width) {
@@ -51,7 +51,7 @@
             }
 
             drawRect(x, y);
-            drawRect2(x + 100, y + 100);
+            drawRect2(x2 + 100, y2 + 100);
             requestAnimationFrame(animate);
         }
 
