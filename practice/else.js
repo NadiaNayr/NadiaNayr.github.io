@@ -1,3 +1,7 @@
-console.log("bob")
-let x = prompt("frank?")
-console.log("hi " + x)
+function TextToBody(text) {
+    document.body.innerHTML += "<p>" + text + "</p>";
+}
+
+console.log("bob");
+let x = prompt("frank?");
+TextToBody("Hello, " + x + "!");
