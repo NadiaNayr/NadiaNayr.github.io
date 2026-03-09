@@ -1,12 +1,12 @@
-# title here
+# Wake Up Prithvi
 
 ## setting
 
-explantion of setting
+The setting is in Prithvi's home in the morning.
 
 ## Map
 
-map of locations (image)
+![map](projects/game/GameImages/FlowChart.png)
 
 ## Story
 
