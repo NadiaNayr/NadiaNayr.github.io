@@ -16,12 +16,18 @@ function locationA() {
     clear();
     print("\nYou are in Prithvi's bedroom");
     print("\nWhere do you want to go next? Say one of these choices:" +
-        "\n\t bathroom");
+        "\n\t bathroom" + 
+        "\n\t hallway");
     
     function processInput(input){
         if (input.toLowerCase() === "bathroom") {
             locationB();
-        } else {
+        }
+        if (input.toLowerCase() === "hallway"){
+            locationC();
+        }
+
+        else {
             stayHere();
             waitThenCall(locationA);
         }
@@ -39,6 +45,27 @@ function locationB() {
         if (input.toLowerCase() === "prithvi's bedroom") {
             locationA();
         } else {
+            stayHere();
+            waitThenCall(locationB);
+        }
+    }
+    waitForInput(processInput);
+}
+function locationC() {
+    clear();
+    print("\nYou are in the hallway!");
+    print("\nWhere do you want to go next? Say one of these choices:" +
+        "\n\t parents' room" +
+        "\n\t downstairs");
+    
+    function processInput(input){
+        if (input.toLowerCase() === "parent's room") {
+            locationA();//temporary
+        }
+        else if (input.toLowerCase() === "downstairs") {
+            locationB()//temporary
+        }
+        else {
             stayHere();
             waitThenCall(locationB);
         }
