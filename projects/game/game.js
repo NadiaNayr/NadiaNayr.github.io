@@ -20,6 +20,7 @@ function locationA() {
     
     function processInput(input){
         if (input.toLowerCase() === "Bathroom") {
+            console.log("works")
             locationB();
         } else {
             stayHere();
@@ -36,7 +37,7 @@ function locationB() {
         "\n\t Prithvi's bedroom");
     
     function processInput(input){
-        if (input.toLowerCase() === "locationa") {
+        if (input.toLowerCase() === "Prithvi's Bedroom") {
             locationA();
         } else {
             stayHere();
