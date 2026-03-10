@@ -23,7 +23,7 @@ function locationA() {
         if (input.toLowerCase() === "bathroom") {
             locationB();
         }
-        if (input.toLowerCase() === "hallway"){
+        else if (input.toLowerCase() === "hallway"){
             locationC();
         }
 
