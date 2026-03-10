@@ -16,11 +16,10 @@ function locationA() {
     clear();
     print("\nYou are in Prithvi's bedroom");
     print("\nWhere do you want to go next? Say one of these choices:" +
-        "\n\t Bathroom");
+        "\n\t bathroom");
     
     function processInput(input){
-        if (input.toLowerCase() === "Bathroom") {
-            console.log("works")
+        if (input.toLowerCase() === "bathroom") {
             locationB();
         } else {
             stayHere();
@@ -34,10 +33,10 @@ function locationB() {
     clear();
     print("\nYou are in the bathroom!");
     print("\nWhere do you want to go next? Say one of these choices:" +
-        "\n\t Prithvi's bedroom");
+        "\n\t prithvi's bedroom");
     
     function processInput(input){
-        if (input.toLowerCase() === "Prithvi's Bedroom") {
+        if (input.toLowerCase() === "prithvi's Bedroom") {
             locationA();
         } else {
             stayHere();
