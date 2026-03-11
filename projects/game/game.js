@@ -6,10 +6,6 @@ let Time = 0
 let EnergyLevel = 0
 
 //If you need, add any "helper" functions here
-function AddTime() {
-    //make it wait
-    Time = Time + 1
-}
 
 //Make one function for each location
 function locationA() {
@@ -83,4 +79,8 @@ function start(){
             locationA();
     }
     waitForInput(processInput);
+    while (true){
+    // how to make it wait
+    Time = Time + 1
+    }
 }
