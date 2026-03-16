@@ -117,6 +117,7 @@ function locationF() {
 function locationG() {
     clear();
     print("\nYou are in your parent's room!");
+    print("\nMom: GO TO SCHOOL! YOU ARE GOING TO BE LATE!");
     print("\nWhere do you want to go next? Say one of these choices:" +
         "\n\t hallway");
     Time = Time + 1
