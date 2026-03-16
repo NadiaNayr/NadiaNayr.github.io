@@ -2,7 +2,7 @@ let gameActive = true; //this variable is required.
                        //to stop the game, set it to false.
 
 //Declare your other global variables here
-let Time = 11
+let Time = 0
 
 //If you need, add any "helper" functions here
 
@@ -13,7 +13,7 @@ function locationA() {
     print("\nWhere do you want to go next? Say one of these choices:" +
         "\n\t bathroom" + 
         "\n\t hallway");
-    
+    Time = Time + 1
     function processInput(input){
         if (input.toLowerCase() === "bathroom") {
             locationB();
@@ -35,7 +35,7 @@ function locationB() {
     print("\nYou are in the bathroom!");
     print("\nWhere do you want to go next? Say one of these choices:" +
         "\n\t prithvi's bedroom");
-    
+    Time = Time + 1
     function processInput(input){
         if (input.toLowerCase() === "prithvi's bedroom") {
             locationA();
@@ -52,7 +52,7 @@ function locationC() {
     print("\nWhere do you want to go next? Say one of these choices:" +
         "\n\t parent's room" +
         "\n\t downstairs");
-    
+    Time = Time + 1
     function processInput(input){
         if (input.toLowerCase() === "parent's room") {
             locationG()
@@ -73,7 +73,7 @@ function locationD() {
     print("\nWhere do you want to go next? Say one of these choices:" +
         "\n\t kitchen" +
         "\n\t outside");
-    
+    Time = Time + 1
     function processInput(input){
         if (input.toLowerCase() === "kitchen") {
             locationE()
@@ -94,7 +94,7 @@ function locationF() {
     print("\nWhere do you want to go next? Say one of these choices:" +
         "\n\t inside" +
         "\n\t school");
-    
+    Time = Time + 1
     function processInput(input){
         if (input.toLowerCase() === "inside") {
             locationD()
@@ -104,7 +104,7 @@ function locationF() {
                 print("You Win!")
             }
             else{
-                print("You Lose!")
+                print("You Lose! (too slow)")
             }
         }
         else {
@@ -119,7 +119,7 @@ function locationG() {
     print("\nYou are in your parent's room!");
     print("\nWhere do you want to go next? Say one of these choices:" +
         "\n\t hallway");
-    
+    Time = Time + 1
     function processInput(input){
         if (input.toLowerCase() === "hallway") {
             locationC()
@@ -136,7 +136,7 @@ function locationE() {
     print("\nYou are in the kitchen!");
     print("\nWhere do you want to go next? Say one of these choices:" +
         "\n\t living room");
-    
+    Time = Time + 1
     function processInput(input){
         if (input.toLowerCase() === "living room") {
             locationD()
