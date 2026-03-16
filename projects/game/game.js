@@ -3,7 +3,6 @@ let gameActive = true; //this variable is required.
 
 //Declare your other global variables here
 let Time = 0
-let EnergyLevel = 0
 
 //If you need, add any "helper" functions here
 
@@ -56,10 +55,74 @@ function locationC() {
     
     function processInput(input){
         if (input.toLowerCase() === "parent's room") {
-            locationA();//temporary
+            locationG()
         }
         else if (input.toLowerCase() === "downstairs") {
-            locationB()//temporary
+            locationD()
+        }
+        else {
+            stayHere();
+            waitThenCall(locationB);
+        }
+    }
+    waitForInput(processInput);
+}
+function locationD() {
+    clear();
+    print("\nYou went downstairs!");
+    print("\nWhere do you want to go next? Say one of these choices:" +
+        "\n\t kitchen" +
+        "\n\t outside");
+    
+    function processInput(input){
+        if (input.toLowerCase() === "kitchen") {
+            locationF()
+        }
+        else if (input.toLowerCase() === "outside"){
+            locationE()
+        }
+        else {
+            stayHere();
+            waitThenCall(locationB);
+        }
+    }
+    waitForInput(processInput);
+}
+function locationF() {
+    clear();
+    print("\nYou are outside!");
+    print("\nWhere do you want to go next? Say one of these choices:" +
+        "\n\t inside" +
+        "\n\t school");
+    
+    function processInput(input){
+        if (input.toLowerCase() === "inside") {
+            locationD()
+        }
+        else if (input.toLowerCase() === "school"){
+            if (Time <= 10){
+                print("You Win!")
+            }
+            else{
+                print("You Lose!")
+            }
+        }
+        else {
+            stayHere();
+            waitThenCall(locationB);
+        }
+    }
+    waitForInput(processInput);
+}
+function locationG() {
+    clear();
+    print("\nYou are in your parent's room!");
+    print("\nWhere do you want to go next? Say one of these choices:" +
+        "\n\t hallway");
+    
+    function processInput(input){
+        if (input.toLowerCase() === "hallway") {
+            locationC()
         }
         else {
             stayHere();
@@ -79,8 +142,4 @@ function start(){
             locationA();
     }
     waitForInput(processInput);
-    while (true){
-    // how to make it wait
-    Time = Time + 1
-    }
 }
