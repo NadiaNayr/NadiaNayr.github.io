@@ -2,7 +2,7 @@ let gameActive = true; //this variable is required.
                        //to stop the game, set it to false.
 
 //Declare your other global variables here
-let Time = 0
+let Time = 11
 
 //If you need, add any "helper" functions here
 
