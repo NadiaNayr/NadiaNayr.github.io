@@ -50,7 +50,7 @@ function locationC() {
     clear();
     print("\nYou are in the hallway!");
     print("\nWhere do you want to go next? Say one of these choices:" +
-        "\n\t parents' room" +
+        "\n\t parent's room" +
         "\n\t downstairs");
     
     function processInput(input){
@@ -62,28 +62,28 @@ function locationC() {
         }
         else {
             stayHere();
-            waitThenCall(locationB);
+            waitThenCall(locationC);
         }
     }
     waitForInput(processInput);
 }
 function locationD() {
     clear();
-    print("\nYou went downstairs!");
+    print("\nYou are in the living room!");
     print("\nWhere do you want to go next? Say one of these choices:" +
         "\n\t kitchen" +
         "\n\t outside");
     
     function processInput(input){
         if (input.toLowerCase() === "kitchen") {
-            locationF()
+            locationE()
         }
         else if (input.toLowerCase() === "outside"){
-            locationE()
+            locationF()
         }
         else {
             stayHere();
-            waitThenCall(locationB);
+            waitThenCall(locationD);
         }
     }
     waitForInput(processInput);
@@ -109,7 +109,7 @@ function locationF() {
         }
         else {
             stayHere();
-            waitThenCall(locationB);
+            waitThenCall(locationF);
         }
     }
     waitForInput(processInput);
@@ -126,7 +126,24 @@ function locationG() {
         }
         else {
             stayHere();
-            waitThenCall(locationB);
+            waitThenCall(locationG);
+        }
+    }
+    waitForInput(processInput);
+}
+function locationE() {
+    clear();
+    print("\nYou are in the kitchen!");
+    print("\nWhere do you want to go next? Say one of these choices:" +
+        "\n\t living room");
+    
+    function processInput(input){
+        if (input.toLowerCase() === "living room") {
+            locationD()
+        }
+        else {
+            stayHere();
+            waitThenCall(locationE);
         }
     }
     waitForInput(processInput);
