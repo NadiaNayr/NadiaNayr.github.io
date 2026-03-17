@@ -2,9 +2,9 @@ const canvas = document.getElementById("MyCanvas")
 const ctx = canvas.getContext("2d")
 
 let x = 0;
-let y = 6;
-let vx = 0;
-let vy = 7;
+let y = 0;
+let vx = 4;
+let vy = 4;
 
 function move(){
     ctx.clearRect(x, 0, 800, 800);
