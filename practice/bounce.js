@@ -11,11 +11,11 @@ function move(){
     x = x + vx;
     y = y + vy;
 
-    if (x > 700 || x < 0){
-        x = x * -1;
+    if (x > 800 || x < 0){
+        vx = vx * -1;
     }
-    if (y > 700 || y < 0){
-        y = y * -1;
+    if (y > 800 || y < 0){
+        vy = vy * -1;
     }
     ctx.fillRect(x, y, 50, 50);
     requestAnimationFrame(move);
