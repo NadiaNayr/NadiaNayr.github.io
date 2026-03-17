@@ -1,8 +1,8 @@
 const canvas = document.getElementById("MyCanvas")
 const ctx = canvas.getContext("2d")
 
-let x = 0;
-let y = 0;
+let x = 8;
+let y = 2;
 let vx = 4;
 let vy = 4;
 
