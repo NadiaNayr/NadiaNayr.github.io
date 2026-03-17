@@ -6,7 +6,7 @@ The setting is in Prithvi's home in the morning.
 
 ## Map
 
-![map](projects/game/GameImages/FlowChart.png)
+![map](GameImages/FlowChart.png)
 
 ## Story
 
@@ -14,4 +14,4 @@ The player is a student named Prithvi who just woke up and needs to get ready fo
 
 ## Variables
 
-- Time - creates sense of urgency and actually allows you to lose
+- Time - creates sense of urgency and actually allows the player to lose
