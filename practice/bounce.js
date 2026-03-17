@@ -5,11 +5,15 @@ let x = 3;
 let y = 2;
 let vx = 3;
 let vy = 4;
+let gravity = 1;
 
 function move(){
     ctx.clearRect(x, 0, 800, 800);
     x = x + vx;
     y = y + vy;
+    vy = vy + gravity;
+    
+
 
     if (x > 750 || x < 0){
         vx = vx * -1;
