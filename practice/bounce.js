@@ -3,7 +3,7 @@ const ctx = canvas.getContext("2d")
 
 let x = 3;
 let y = 2;
-let vx = 4;
+let vx = 3;
 let vy = 4;
 
 function move(){
