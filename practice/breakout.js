@@ -33,7 +33,7 @@ function drawBricks(){
 
       //TODO: use the variables above to write the code that draws the bricks.
       //this should be a single function call to ctx.fillRect();
-        ctx.rect(
+        ctx.fillRect(
             brickOffsetLeft + (brickWidth + brickPadding) * c,
             brickOffsetTop + (brickWidth + brickPadding) * r,
             brickWidth,
