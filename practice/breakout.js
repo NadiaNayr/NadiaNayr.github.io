@@ -99,6 +99,13 @@ function draw() {
     dy = -dy;
   }
 
+    if (x + dx2 > canvas.width - ballRadius || x + dx2 < ballRadius) {
+        dx2 = -dx2;
+    }
+    if (y + dy2 < ballRadius || y + dy2 > canvas.height - ballRadius) {
+        dy2 = -dy2;
+    }
+
   if (rightPressed && paddleX < canvas.width - paddleWidth) {
     paddleX += 7;
   } else if (leftPressed && paddleX > 0) {
