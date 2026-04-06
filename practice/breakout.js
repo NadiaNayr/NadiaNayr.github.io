@@ -9,6 +9,9 @@ let y = Math.random()*800;
 let dx = 2;
 let dy = -2;
 
+let dx2 = 2;
+let dy2 = -2;
+
 const paddleHeight = 10;
 const paddleWidth = 75;
 
@@ -30,9 +33,6 @@ const brickOffsetLeft = 30;
 function drawBricks(){
   for (let c = 0; c < brickColumnCount; c++) {
     for (let r = 0; r < brickRowCount; r++) {
-
-      //TODO: use the variables above to write the code that draws the bricks.
-      //this should be a single function call to ctx.fillRect();
         ctx.fillRect(
             brickOffsetLeft + (brickWidth + brickPadding) * c,
             brickOffsetTop + (brickWidth + brickPadding) * r,
@@ -70,6 +70,14 @@ function drawBall() {
   ctx.fill();
   ctx.closePath();
 }
+
+function drawBall2() {
+  ctx.beginPath();
+  ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.closePath();
+}
+
 function drawPaddle() {
   ctx.beginPath();
   ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
@@ -80,6 +88,7 @@ function drawPaddle() {
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   drawBall();
+  drawBall2();
   drawPaddle();
   drawBricks();
 
@@ -99,6 +108,9 @@ function draw() {
   //move the ball
   x += dx;
   y += dy;
+
+  x += dx2;
+  x += dy2;
 
   requestAnimationFrame(draw);
 }
