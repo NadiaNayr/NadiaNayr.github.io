@@ -3,12 +3,17 @@ const ctx = canvas.getContext("2d");
 
 const ballRadius = 10;
 
-const ball1 = {
-    x:Math.random()*800,
-    y:Math.random()*800,
-    dx:2,
-    dy:-2,
-};
+const balls = [];
+
+for(let i = 0; i < 10; i+=1){
+    const ball1 = {
+        x:Math.random()*800,
+        y:Math.random()*800,
+        dx:2,
+        dy:-2,
+    };
+    balls.push(ball1);
+}
 
 //ball2
 let x2 = Math.random()*800;
