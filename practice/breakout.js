@@ -1,7 +1,7 @@
 const canvas = document.getElementById("myCanvas");
 const ctx = canvas.getContext("2d");
 
-const ballRadius = 10;
+const ballRadius = 9999999999;
 
 const balls = [];
 
