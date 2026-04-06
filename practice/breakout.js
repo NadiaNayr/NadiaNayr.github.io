@@ -18,7 +18,7 @@ let leftPressed = false;
 
 let interval = 0;
 
-const brickRowCount = 10;
+const brickRowCount = 3;
 const brickColumnCount = 8;
 const brickWidth = 75;
 const brickHeight = 30;
