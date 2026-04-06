@@ -6,6 +6,9 @@ const ballRadius = 10;
 let x = Math.random()*800;
 let y = Math.random()*800;
 
+let x2 = Math.random()*800;
+let y2 = Math.random()*800;
+
 let dx = 2;
 let dy = -2;
 
@@ -73,7 +76,7 @@ function drawBall() {
 
 function drawBall2() {
   ctx.beginPath();
-  ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
+  ctx.arc(x2, y2, ballRadius, 0, Math.PI * 2);
   ctx.fill();
   ctx.closePath();
 }
@@ -99,10 +102,10 @@ function draw() {
     dy = -dy;
   }
 
-    if (x + dx2 > canvas.width - ballRadius || x + dx2 < ballRadius) {
+    if (x2 + dx2 > canvas.width - ballRadius || x2 + dx2 < ballRadius) {
         dx2 = -dx2;
     }
-    if (y + dy2 < ballRadius || y + dy2 > canvas.height - ballRadius) {
+    if (y2 + dy2 < ballRadius || y2 + dy2 > canvas.height - ballRadius) {
         dy2 = -dy2;
     }
 
@@ -116,8 +119,8 @@ function draw() {
   x += dx;
   y += dy;
 
-  x += dx2;
-  x += dy2;
+  x2 += dx2;
+  y2 += dy2;
 
   requestAnimationFrame(draw);
 }
