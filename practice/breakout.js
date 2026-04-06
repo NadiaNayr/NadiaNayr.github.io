@@ -3,15 +3,16 @@ const ctx = canvas.getContext("2d");
 
 const ballRadius = 10;
 
-let x = Math.random()*800;
-let y = Math.random()*800;
+const ball1 = {
+    x:Math.random()*800,
+    y:Math.random()*800,
+    dx:2,
+    dy:-2,
+};
 
+//ball2
 let x2 = Math.random()*800;
 let y2 = Math.random()*800;
-
-let dx = 2;
-let dy = -2;
-
 let dx2 = 2;
 let dy2 = -2;
 
@@ -69,7 +70,7 @@ document.addEventListener("keyup", keyUpHandler);
 
 function drawBall() {
   ctx.beginPath();
-  ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
+  ctx.arc(ball1.x, ball1.y, ballRadius, 0, Math.PI * 2);
   ctx.fill();
   ctx.closePath();
 }
@@ -95,11 +96,11 @@ function draw() {
   drawPaddle();
   drawBricks();
 
-  if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
-    dx = -dx;
+  if (ball1.x + ball1.dx > canvas.width - ballRadius || ball1.x + ball1.dx < ballRadius) {
+    ball1.dx = -ball1.dx;
   }
-  if (y + dy < ballRadius || y + dy > canvas.height - ballRadius) {
-    dy = -dy;
+  if (ball1.y + ball1.dy < ballRadius || ball1.y + ball1.dy > canvas.height - ballRadius) {
+    ball1.dy = -ball1.dy;
   }
 
     if (x2 + dx2 > canvas.width - ballRadius || x2 + dx2 < ballRadius) {
@@ -116,8 +117,8 @@ function draw() {
   }
 
   //move the ball
-  x += dx;
-  y += dy;
+  ball1.x += ball1.dx;
+  ball1.y += ball1.dy;
 
   x2 += dx2;
   y2 += dy2;
