@@ -10,7 +10,7 @@ for(let i = 0; i < 10; i+=1){
         x:Math.random()*800,
         y:Math.random()*800,
         dx:2,
-        dy:-2,
+        dy:-2
     };
     balls.push(ball1);
 }
@@ -74,10 +74,12 @@ document.addEventListener("keydown", keyDownHandler);
 document.addEventListener("keyup", keyUpHandler);
 
 function drawBall() {
-  ctx.beginPath();
-  ctx.arc(ball1.x, ball1.y, ballRadius, 0, Math.PI * 2);
-  ctx.fill();
-  ctx.closePath();
+    for(const b of balls){
+        ctx.beginPath();
+        ctx.arc(b.x, b.y, ballRadius, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.closePath();
+    }
 }
 
 function drawBall2() {
@@ -101,12 +103,14 @@ function draw() {
   drawPaddle();
   drawBricks();
 
-  if (ball1.x + ball1.dx > canvas.width - ballRadius || ball1.x + ball1.dx < ballRadius) {
-    ball1.dx = -ball1.dx;
-  }
-  if (ball1.y + ball1.dy < ballRadius || ball1.y + ball1.dy > canvas.height - ballRadius) {
-    ball1.dy = -ball1.dy;
-  }
+    for(const b of balls){
+        if (b.x + b.dx > canvas.width - ballRadius || b.x + b.dx < ballRadius) {
+            b.dx = -b.dx;
+        }
+        if (b.y + b.dy < ballRadius || b.y + b.dy > canvas.height - ballRadius) {
+            b.dy = -b.dy;
+        }
+    }
 
     if (x2 + dx2 > canvas.width - ballRadius || x2 + dx2 < ballRadius) {
         dx2 = -dx2;
@@ -122,8 +126,11 @@ function draw() {
   }
 
   //move the ball
-  ball1.x += ball1.dx;
-  ball1.y += ball1.dy;
+  for(const b of balls){
+    b.x += b.dx;
+    b.y += b.dy;
+
+  }
 
   x2 += dx2;
   y2 += dy2;
