@@ -6,39 +6,38 @@
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 	<style>
 		body{
-			background-color:lightblue;
+			background-color:#faedcd;
+		}
+		.card {
+  			/* Adds shadow effect */
+  			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  			transition: 0.3s;
+		}
+		.card:hover {
+			/* more shawdo when mouse is over */
+  			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+		}
+		.container {
+			/* padding inside the card */
+  			padding: 2px 16px;
 		}
 	</style>
 
 
 	<script>
-//		alert("You have been hacked")
+
 	</script>
 </head>
 <body>
-	<a href="https://www.google.com">This is a link</a>
-	<a href="#TheBobText">This is another link</a>
-	<table>
-	  <tr>
-	    <td>frank</td>
-	    <td>Jeff</td>
-	  </tr>	
-	  <tr>
-	    <td>jeff</td>
-	    <td>frank</td>
-	  </tr>
-	</table>
-	
-	<!--picture of my cat-->
-	<img src="images/cat.jpg"
-		alt="picture of cat"
-		srcset="images/cat.jpeg 320w, 
-			images/cat2.jpeg 640,"
-		sizes="(max-width: 320) 95vw,
-		      (max-width: 640) 45vw">
 
-	<p id="TheBobText"><strong> bob</strong> </p>
-	<p>Hi</p>
-	<p> frank </p>
+	<!-- Project Cards -->
+
+	<div class="card1">
+  		<div class="container">
+    		<h4><b>Client Project</b></h4>
+    		<p>Made for a real buisness!</p>
+  		</div>
+	</div>
+
 </body>
 </html>
