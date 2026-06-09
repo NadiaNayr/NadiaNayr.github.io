@@ -8,7 +8,7 @@
 		body{
 			background-color:#faedcd;
 		}
-		.card1 {
+		.card {
   			/* Adds shadow effect */
   			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   			transition: 0.3s;
@@ -20,13 +20,18 @@
 			color: inherit;
 			cursor: pointer;
 		}
-		.card1:hover {
+		.card:hover {
 			/* more shadow when mouse is over */
   			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 		}
 		.container {
 			/* padding inside the card */
   			padding: 10px 16px;
+		}
+		.cards-container {
+			display: flex;
+			gap: 20px;
+			flex-wrap: wrap;
 		}
 	</style>
 
@@ -40,13 +45,23 @@
 
 	<!-- Project Cards -->
 
-	<a href="projects/Client/index.html" class="card1">
-  		<div class="container">
-			<img src="images/ClientProject.png" style="width: 100%; height: auto;" >
-    		<h4><b>Client Project</b></h4>
-    		<p>Made for a real buisness!</p>
-  		</div>
-	</a>
+	<div class="cards-container">
+		<a href="projects/Client/index.html" class="card">
+  			<div class="container">
+				<img src="images/ClientProject.png" style="width: 100%; height: auto;" >
+    			<h4><b>Client Project</b></h4>
+    			<p>Made for a real buisness!</p>
+  			</div>
+		</a>
+
+		<a href="projects/game/index.html" class="card">
+  			<div class="container">
+				<img src="images/GameProject.png" style="width: 100%; height: auto;" >
+    			<h4><b>Game Project</b></h4>
+    			<p>A text based game about helping a boy named prithvi get to school. There is a variable that counts the number of rooms he goes through. To win, you have to get to school before going into 11 rooms.</p>
+  			</div>
+		</a>
+	</div>
 
 </body>
 
