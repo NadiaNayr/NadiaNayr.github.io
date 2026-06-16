@@ -91,6 +91,7 @@
 		.about-flex {
 			display: flex;
 			flex-wrap: wrap;
+			justify-content: space-between;
 			align-items: flex-start;
 			gap: 20px;
 			padding-left: 30px;
@@ -98,13 +99,15 @@
 
 		.about-flex .about-text {
 			flex: 1 1 320px;
+			max-width: calc(100% - 320px);
 		}
 
 		.about-flex img {
 			flex: 0 0 300px;
-			max-width: 100%;
+			max-width: 300px;
 			height: auto;
 			border-radius: 8px;
+			margin-left: auto;
 		}
 
 		@media screen and (max-width: 700px) {
@@ -144,7 +147,7 @@
 			<div class="about-text">
 				<p>My name is Aidan and I am a student at the Arlington Career Center. I am currently taking the ITD 110/210 class, which is about web design. I am planning on taking more classes like this in the future, like Computer programming next year.</p>
 			</div>
-			<img src="images/ClientProject.png" alt="About image" />
+			<img src="images/code picture.png" alt="About image" />
 		</div>
 	</section>
 
